@@ -1,0 +1,35 @@
+# Consumer-Producer_Process
+Consumer-Producer Process communication in C development.
+
+Step 1:
+We can compile and run the spooler as below.
+
+$ gcc spooler.c -o spooler
+
+$ >/tmp/shared_memory_key
+
+$ >/tmp/sem-mutex-key
+
+$ >/tmp/sem-buffer-count-key
+
+$ >/tmp/sem-spool-signal-key
+
+$ ./spooler
+
+spooler: hello world
+
+(5942): hello spooler
+
+(5980): Hello spooler
+
+(6012): Hello world
+
+
+Step 2:
+And compiling and running a client from another terminal,
+
+$ gcc client.c -o client
+
+$ ./client
+
+Please type a message: Hello spooler
